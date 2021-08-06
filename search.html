@@ -36,6 +36,15 @@
       <input id="search_book" type="text" class="well-sm" placeholder="Search reviews by book name" style="width: 40%;">
 
       <button id="test" class="btn navbar-btn" onclick="getData()" style="background-color: black;
+     <script>
+              var input = document.getElementById("search_book");
+              input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                 event.preventDefault();
+                 document.getElementById("test").click();
+                }
+              });
+              </script>
           color: white; font-size: 18px;
            margin-left: 7px;">GO</button>
     </nav>
